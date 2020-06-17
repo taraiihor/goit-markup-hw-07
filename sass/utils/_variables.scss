@@ -1,0 +1,54 @@
+$primery-text-color: #757575;
+$title-text-color: #212121;
+$accent-color: #2196f3;
+$button: #ffffff;
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  color: $primery-text-color;
+  font-family: Roboto, sans-serif;
+}
+img {
+  display: block;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.header-hiade {
+  border-bottom: 0px;
+}
+
+.list {
+  list-style: none;
+  text-decoration: none;
+}
+
+.continer {
+  width: 1200px;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
