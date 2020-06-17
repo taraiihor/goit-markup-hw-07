@@ -1,17 +1,18 @@
 .section-partners {
   padding-top: 94px;
   padding-bottom: 94px;
-}
-.section-partners .title {
-  margin-top: 0;
-  margin-bottom: 50px;
-  color: $title-text-color;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
+
+  .title {
+    margin-top: 0;
+    margin-bottom: 50px;
+    color: $title-text-color;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
 }
 
 .section-partners-icon {
@@ -37,10 +38,10 @@
   fill: #afb1b8;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.icon-logo:focus,
-.icon-logo:hover {
-  fill: $accent-color;
-  border: 1px solid $accent-color;
+  &:focus,
+  &:hover {
+    fill: $accent-color;
+    border: 1px solid $accent-color;
+  }
 }

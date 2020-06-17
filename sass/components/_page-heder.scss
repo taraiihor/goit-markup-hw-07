@@ -5,14 +5,38 @@
 .site-nav {
   display: flex;
   align-items: center;
+
+  .item {
+    position: relative;
+  }
+
+  .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: $title-text-color;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  .link.current {
+    color: $accent-color;
+  }
 }
 
 .site-nav .item + .item {
   margin-left: 50px;
-}
-
-.site-nav .item {
-  position: relative;
 }
 
 .current::after {
@@ -26,56 +50,23 @@
   border-radius: 2px;
 }
 
-.site-nav .link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-
-  color: $title-text-color;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.15;
-  letter-spacing: 0.02em;
-
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover,
-  &:focus {
-    color: $accent-color;
-  }
-}
-
-// .site-nav .link:hover,
-// .site-nav .link:focus {
-//   color: $accent-color;
-// }
-
-.site-nav .link.current {
-  color: $accent-color;
-}
-
 .mail-nav {
   display: flex;
   margin-left: auto;
   align-items: center;
   justify-content: center;
-}
 
-.mail-nav .item + .item {
-  margin-left: 30px;
-}
-
-.mail-nav .link-mail {
-  display: flex;
-  color: $primery-text-color;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.15;
-  letter-spacing: 0.02em;
-  align-items: center;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .link-mail {
+    display: flex;
+    color: $primery-text-color;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+    align-items: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
   &:hover,
   &:focus {
@@ -83,10 +74,9 @@
   }
 }
 
-// .mail-nav .link-mail:hover,
-// .mail-nav .link-mail:focus {
-//   color: $accent-color;
-// }
+.mail-nav .item + .item {
+  margin-left: 30px;
+}
 
 .icon-mail {
   fill: currentColor;

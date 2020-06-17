@@ -1,11 +1,35 @@
-.section-features .title {
-  color: $title-text-color;
-  margin: 0;
-  text-align: center;
-}
 .section-features {
   padding-top: 94px;
   padding-bottom: 94px;
+
+  .title {
+    color: $title-text-color;
+    margin: 0;
+    text-align: center;
+  }
+
+  .subtitle {
+    margin-top: 0px;
+    margin-bottom: 10px;
+
+    color: $title-text-color;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  .text {
+    margin: 0;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 }
 
 .features-card {
@@ -27,27 +51,4 @@
 
 .features-card .icon + .icon {
   margin-left: 30px;
-}
-
-.section-features .subtitle {
-  margin-top: 0px;
-  margin-bottom: 10px;
-
-  color: $title-text-color;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.15;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
-
-.section-features .text {
-  margin: 0;
-
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
 }
