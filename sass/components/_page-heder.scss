@@ -2,6 +2,10 @@
   border-bottom: 1px solid #ececec;
 }
 
+.header-hiade {
+  border-bottom: 0px;
+}
+
 .site-nav {
   display: flex;
   align-items: center;
@@ -23,11 +27,11 @@
     letter-spacing: 0.02em;
 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
 
-  &:hover,
-  &:focus {
-    color: $accent-color;
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
   }
 
   .link.current {
@@ -66,11 +70,11 @@
     letter-spacing: 0.02em;
     align-items: center;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
 
-  &:hover,
-  &:focus {
-    color: $accent-color;
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
   }
 }
 

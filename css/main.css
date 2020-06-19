@@ -35,10 +35,6 @@ ul {
   clip: rect(0 0 0 0);
 }
 
-.header-hiade {
-  border-bottom: 0px;
-}
-
 .list {
   list-style: none;
   text-decoration: none;
@@ -53,6 +49,10 @@ ul {
 
 .page-header {
   border-bottom: 1px solid #ececec;
+}
+
+.header-hiade {
+  border-bottom: 0px;
 }
 
 .site-nav {
@@ -82,7 +82,7 @@ ul {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.site-nav:hover, .site-nav:focus {
+.site-nav .link:hover, .site-nav .link:focus {
   color: #2196f3;
 }
 
@@ -135,7 +135,7 @@ ul {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mail-nav:hover, .mail-nav:focus {
+.mail-nav .link-mail:hover, .mail-nav .link-mail:focus {
   color: #2196f3;
 }
 
@@ -206,6 +206,7 @@ ul {
           align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
+  border: 0;
 }
 
 .backdrop {
@@ -242,17 +243,20 @@ ul {
 
 .button-close {
   position: absolute;
-  top: 0;
-  right: 0;
-  -webkit-transform: translate(30%, -30%);
-          transform: translate(30%, -30%);
+  top: 8px;
+  right: 8px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
   background: #ffffff;
-  -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
   border: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-close:focus, .button-close:hover {
+  fill: #2196f3;
 }
 
 .modale-title {
@@ -275,7 +279,8 @@ ul {
 
 .input-label {
   position: absolute;
-  top: 12px;
+  display: block;
+  top: 50%;
   left: 42px;
   font-family: Roboto;
   font-style: normal;
@@ -284,7 +289,8 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.01em;
   color: #757575;
-  /* transform: translateY(-50%); */
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -294,10 +300,11 @@ ul {
 .form-input {
   display: block;
   width: 448px;
-  height: 40px;
-  min-height: 40px;
   margin-bottom: 28px;
   padding: 12px 42px;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -305,19 +312,18 @@ ul {
 }
 
 .form-input:focus + .input-label,
-.form-input .form-input:not(:placeholder-shown) + .input-label {
+.form-input:not(:placeholder-shown) + .input-label {
   color: #2196f3;
-  -webkit-transform: translateY(-30px) translateX(-26px);
-          transform: translateY(-30px) translateX(-26px);
+  -webkit-transform: translateY(-40px) translateX(-26px);
+          transform: translateY(-40px) translateX(-26px);
 }
 
 .form-input:focus ~ .icon-modal,
-.form-input .form-input:not(:placeholder-shown) ~ .icon-modal {
+.form-input:not(:placeholder-shown) ~ .icon-modal {
   fill: #2196f3;
 }
 
-.form-input:focus,
-.form-input .form-input:not(:placeholder-shown) {
+.form-input:focus, .form-input:not(:placeholder-shown) {
   border: 1px solid #2196f3;
   outline: none;
 }
@@ -346,8 +352,14 @@ ul {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-textarea:focus,
-.modal-textarea .modal-textarea:not(:placeholder-shown) {
+.modal-textarea:focus + .textarea-coments,
+.modal-textarea:not(:placeholder-shown) + .textarea-coments {
+  color: #2196f3;
+  -webkit-transform: translateY(-32px);
+          transform: translateY(-32px);
+}
+
+.modal-textarea:focus, .modal-textarea:not(:placeholder-shown) {
   border: 1px solid #2196f3;
   outline: none;
 }
@@ -368,17 +380,13 @@ ul {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.textarea-coments:focus + .textarea-coments,
-.textarea-coments .modal-textarea:not(:placeholder-shown) + .textarea-coments {
-  color: #2196f3;
-  -webkit-transform: translateY(-30px);
-          transform: translateY(-30px);
-}
-
 .checkbox-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -388,9 +396,7 @@ ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .checkbox-document {
@@ -431,10 +437,12 @@ ul {
 
 .checkbox-text::before {
   content: "";
-  width: 15px;
   height: 15px;
+  width: 16px;
   margin-right: 8px;
   background: url(../imeges/icon-chek.svg);
+  -webkit-transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-form {
@@ -730,7 +738,7 @@ ul {
   letter-spacing: 0.03em;
 }
 
-.footer-t {
+.footer-continer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -755,10 +763,38 @@ ul {
   color: #ffffff;
 }
 
-.adress {
+.footer .button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: #2196f3;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1.87;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 29px;
+  padding-right: 29px;
+  margin-left: 12px;
+  border: 0;
+  border-radius: 4px;
+}
+
+.footer .title {
+  color: #ffffff;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 .icon-footer-social {
@@ -791,8 +827,7 @@ ul {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icon-footer:focus,
-.icon-footer:hover {
+.icon-footer:focus, .icon-footer:hover {
   background-color: #2196f3;
 }
 
@@ -842,40 +877,9 @@ ul {
   display: flex;
 }
 
-.footer .button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #2196f3;
-  color: #ffffff;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 16px;
-  line-height: 1.87;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 29px;
-  margin-left: 12px;
-}
-
 .icon-footer-button {
   display: inline-block;
   margin-left: 10px;
-}
-
-.footer .title {
-  color: #ffffff;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
 }
 
 .copiraite {

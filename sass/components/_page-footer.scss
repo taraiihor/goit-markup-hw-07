@@ -6,7 +6,7 @@
   letter-spacing: 0.03em;
 }
 
-.footer-t {
+.footer-continer {
   display: flex;
   justify-content: space-between;
   padding-top: 48px;
@@ -20,10 +20,36 @@
 
 .footer {
   color: $button;
-}
 
-.adress {
-  display: flex;
+  .button {
+    display: flex;
+    background-color: $accent-color;
+    color: $button;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 1.87;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 29px;
+    padding-right: 29px;
+    margin-left: 12px;
+    border: 0;
+    border-radius: 4px;
+  }
+
+  .title {
+    color: $button;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
 }
 
 .icon-footer-social {
@@ -45,32 +71,34 @@
   border-radius: 50%;
   fill: white;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus,
+  &:hover {
+    background-color: $accent-color;
+  }
 }
 
-.icon-footer:focus,
-.icon-footer:hover {
-  background-color: $accent-color;
-}
+.address {
+  .text {
+    margin: 0px;
+    padding-top: 10px;
+    color: $button;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 
-.address .text {
-  margin: 0px;
-  padding-top: 10px;
-  color: $button;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-}
-
-.address .mail {
-  padding-top: 9px;
-  color: rgba(255, 255, 255, 0.6);
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  .mail {
+    padding-top: 9px;
+    color: rgba(255, 255, 255, 0.6);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 }
 
 .footer-form {
@@ -96,36 +124,9 @@
   display: flex;
 }
 
-.footer .button {
-  display: flex;
-  background-color: $accent-color;
-  color: $button;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 16px;
-  line-height: 1.87;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 29px;
-  margin-left: 12px;
-}
-
 .icon-footer-button {
   display: inline-block;
   margin-left: 10px;
-}
-
-.footer .title {
-  color: $button;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
 }
 
 .copiraite {

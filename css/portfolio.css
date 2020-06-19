@@ -35,10 +35,6 @@ ul {
   clip: rect(0 0 0 0);
 }
 
-.header-hiade {
-  border-bottom: 0px;
-}
-
 .list {
   list-style: none;
   text-decoration: none;
@@ -53,6 +49,10 @@ ul {
 
 .page-header {
   border-bottom: 1px solid #ececec;
+}
+
+.header-hiade {
+  border-bottom: 0px;
 }
 
 .site-nav {
@@ -82,7 +82,7 @@ ul {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.site-nav:hover, .site-nav:focus {
+.site-nav .link:hover, .site-nav .link:focus {
   color: #2196f3;
 }
 
@@ -135,7 +135,7 @@ ul {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mail-nav:hover, .mail-nav:focus {
+.mail-nav .link-mail:hover, .mail-nav .link-mail:focus {
   color: #2196f3;
 }
 
@@ -317,7 +317,7 @@ ul {
   letter-spacing: 0.03em;
 }
 
-.footer-t {
+.footer-continer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -342,10 +342,38 @@ ul {
   color: #ffffff;
 }
 
-.adress {
+.footer .button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: #2196f3;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1.87;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 29px;
+  padding-right: 29px;
+  margin-left: 12px;
+  border: 0;
+  border-radius: 4px;
+}
+
+.footer .title {
+  color: #ffffff;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 .icon-footer-social {
@@ -378,8 +406,7 @@ ul {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icon-footer:focus,
-.icon-footer:hover {
+.icon-footer:focus, .icon-footer:hover {
   background-color: #2196f3;
 }
 
@@ -429,40 +456,9 @@ ul {
   display: flex;
 }
 
-.footer .button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #2196f3;
-  color: #ffffff;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 16px;
-  line-height: 1.87;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 29px;
-  margin-left: 12px;
-}
-
 .icon-footer-button {
   display: inline-block;
   margin-left: 10px;
-}
-
-.footer .title {
-  color: #ffffff;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
 }
 
 .copiraite {
